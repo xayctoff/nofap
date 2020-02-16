@@ -21,6 +21,7 @@ class BaseController extends AbstractController
                 'name' => [
                     'Dmitry',
                     'Petr',
+                    'Alex',
                 ],
                 'action' => 'nofap',
             ]
