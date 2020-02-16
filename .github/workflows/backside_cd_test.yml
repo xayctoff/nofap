@@ -1,0 +1,22 @@
+name: BACKSIDE_CD_ver1
+
+on: 
+  push:
+    branches: 
+      - backside-dev
+
+jobs:
+  build:
+    name: TESTING
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Create new txt
+      uses: appleboy/ssh-action@master
+      with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: cd ~/project && touch hello_bit4es.txt
+      
