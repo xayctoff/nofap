@@ -22,6 +22,7 @@ class BaseController extends AbstractController
                     'Dmitry',
                     'Petr',
                     'Alex',
+                    'Slavik',
                 ],
                 'action' => 'nofap',
             ]
