@@ -10,7 +10,6 @@ jobs:
     runs-on: [ubuntu-latest]
     steps:
     - uses: actions/checkout@v1
-    - run: cd backside && ls -a
-    - run: ls -a
+    - run: cd backside && ls -a && composer install
 #     - run: composer install
-#     - run: backside/vendor/bin/phpunit
+    - run: backside/vendor/bin/phpunit
