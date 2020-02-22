@@ -1,0 +1,14 @@
+name: test_run_on_backside_dev
+
+on: 
+  push:
+    branches: 
+      - backside-dev
+
+jobs:
+  phpunit:
+    runs-on: [ubuntu-latest]
+    steps:
+    - uses: actions/checkout@v1
+    - run: cd backside && ls -a && bin/console cache:clear && composer install && vendor/bin/phpunit
+
