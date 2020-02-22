@@ -1,0 +1,15 @@
+name: phpunit_testing
+
+on:
+  push:
+    branches: 
+      - backside-dev
+
+jobs:
+  phpunit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: pxgamer/phpunit-action@master
+        with:
+          command: backside/tests/
