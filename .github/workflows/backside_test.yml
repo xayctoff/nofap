@@ -15,7 +15,8 @@ jobs:
           with:
             php-version: 7.4 # Use your PHP version
             extensions: mbstring, bcmath # Setup any required extensions for tests
-        - working-directory: backside
+        - name: changedirectory
+          working-directory: backside
         - name: Composer install
           run: composer install
         - name: Run Tests
