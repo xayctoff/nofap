@@ -15,11 +15,13 @@ jobs:
           with:
             php-version: 7.4 # Use your PHP version
             extensions: mbstring, bcmath # Setup any required extensions for tests
-        - name: changedirectory AND composerinstall AND testing
-          run: |
-            composer install
-            ./vendor/bin/phpunit
+        - name: composerinstall
+          run: composer install
           working-directory: ./backside
+        - name: testing
+          run: ./vendor/bin/phpunit
+          working-directory: ./backside
+
 #         - name: Composer install
 #           run: composer install
 #         - name: Run Tests
