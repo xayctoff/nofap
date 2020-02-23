@@ -2,8 +2,7 @@ name: test_run_on_backside_dev
 
 on: 
   push:
-    branches: 
-      - backside-dev
+    branches: master
 
 jobs:
   test-php:
