@@ -6,9 +6,17 @@ on:
       - backside-dev
 
 jobs:
-  phpunit:
-    runs-on: [ubuntu-latest]
-    steps:
-    - uses: actions/checkout@v1
-    - run: cd backside && ls -a && composer install && vendor/bin/phpunit
-
+  test-php:
+      name: Test/Lint PHP
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v1
+        - name: Setup PHP
+          uses: shivammathur/setup-php@v1
+          with:
+            php-version: 7.4 # Use your PHP version
+            extensions: mbstring, bcmath # Setup any required extensions for tests
+        - name: Composer install
+          run: cd backside && composer install
+        - name: Run Tests
+          run: cd backside && ./vendor/bin/phpunit
