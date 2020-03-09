@@ -1,0 +1,25 @@
+@import 'src/styles/constants'
+
+.navbar
+    background-color: $navbar__background-color
+    border-bottom: $border-bottom
+
+    .navbar__row__content,
+    .navbar__row__content > *
+        display: contents
+        height: inherit
+        width: 100%
+
+    .navbar__row__content__image
+        height: 48px
+
+    .navbar__row__content__image:hover
+        opacity: 0.85
+
+.sidenav
+    width: 20%
+
+    ::ng-deep
+        .mat-drawer-inner-container
+            background-color: $navbar__background-color
+            width: 100%
