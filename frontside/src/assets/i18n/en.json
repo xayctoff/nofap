@@ -1,0 +1,10 @@
+{
+  "navbar": {
+    "exit": "Sign out"
+  },
+
+  "sidebar" : {
+    "close": "Close",
+    "exit": "Sign out"
+  }
+}

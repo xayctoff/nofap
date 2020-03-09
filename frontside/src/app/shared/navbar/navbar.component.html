@@ -13,7 +13,7 @@
                    href="#"
                    mat-button>
                     <mat-icon>exit_to_app</mat-icon>
-                    <span>Sign out</span>
+                    <span>{{ "navbar.exit" | translate }}</span>
                 </a>
             </div>
 
@@ -36,14 +36,14 @@
             <a class="sidenav__list__button"
                mat-list-item>
                 <mat-icon>exit_to_app</mat-icon>
-                <span>Sign out</span>
+                <span>{{ "sidebar.exit" | translate }}</span>
             </a>
 
             <a class="sidenav__list__button"
                mat-list-item
                (click)="sidenavToggle()">
                 <mat-icon>close</mat-icon>
-                <span>Close</span>
+                <span>{{ "sidebar.close" | translate }}</span>
             </a>
         </mat-nav-list>
     </mat-sidenav>

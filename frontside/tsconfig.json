@@ -6,6 +6,10 @@
     "paths": {
       "@pages/*": [
         "app/pages/*"
+      ],
+
+      "@shared/*": [
+        "app/shared/*"
       ]
     },
     "sourceMap": true,
