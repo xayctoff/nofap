@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatSidenav } from "@angular/material/sidenav";
 
 @Component({
     selector: 'app-navbar',
@@ -7,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+    @ViewChild('sidenav') _sidenav: MatSidenav;
+
     constructor() {
     }
 
     ngOnInit(): void {
+    }
+
+    sidenavToggle(): void {
+        this._sidenav.toggle().then();
     }
 
 }

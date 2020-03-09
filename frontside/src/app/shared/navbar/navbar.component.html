@@ -1,5 +1,50 @@
 <mat-toolbar class="navbar">
     <mat-toolbar-row class="navbar__row">
+        <div class="navbar__row__content"
+             fxLayout="row"
+             fxLayoutAlign="space-between center">
+            <div>
+                <img src="assets/nofap.png" alt="nofap" class="navbar__row__content__image">
+            </div>
 
+            <div fxShow="true"
+                 fxHide.lt-md="true">
+                <a class="navbar__row__button"
+                   href="#"
+                   mat-button>
+                    <mat-icon>exit_to_app</mat-icon>
+                    <span>Sign out</span>
+                </a>
+            </div>
+
+            <button class="navbar__row__button"
+                    mat-icon-button
+                    fxShow="true"
+                    fxHide.gt-sm
+                    [disableRipple]="true"
+                    (click)="sidenavToggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+        </div>
     </mat-toolbar-row>
 </mat-toolbar>
+
+<mat-sidenav-container fxFlexFill>
+    <mat-sidenav class="sidenav"
+                 #sidenav>
+        <mat-nav-list>
+            <a class="sidenav__list__button"
+               mat-list-item>
+                <mat-icon>exit_to_app</mat-icon>
+                <span>Sign out</span>
+            </a>
+
+            <a class="sidenav__list__button"
+               mat-list-item
+               (click)="sidenavToggle()">
+                <mat-icon>close</mat-icon>
+                <span>Close</span>
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+</mat-sidenav-container>
